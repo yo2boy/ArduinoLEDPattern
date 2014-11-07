@@ -31,7 +31,6 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
             R.id.switch7, R.id.switch8, R.id.switch9, R.id.switch10,
             R.id.switch11, R.id.switch12};
 
-
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
@@ -44,6 +43,10 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
             case R.id.settings:
                 Intent intent = new Intent(MainActivity.this, Settings.class);
                 startActivity(intent);
+                return true;
+            case R.id.about:
+                Intent i = new Intent(MainActivity.this, About.class);
+                startActivity(i);
                 return true;
         }
         return false;

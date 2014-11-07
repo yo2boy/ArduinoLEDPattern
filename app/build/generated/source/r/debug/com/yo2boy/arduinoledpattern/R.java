@@ -64,8 +64,9 @@ public final class R {
         public static final int tableRow1=0x7f080025;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int settings_activity=0x7f030001;
+        public static final int about_activity=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int settings_activity=0x7f030002;
     }
     public static final class menu {
         public static final int menu=0x7f070000;
@@ -95,16 +96,11 @@ public final class R {
         public static final int toggle_turn_on=0x7f050015;
     }
     public static final class style {
-        /** 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
- API 14 theme customizations can go here. 
+        /**  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f060001;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f060000;
     }
 }

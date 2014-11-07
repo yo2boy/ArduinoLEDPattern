@@ -11,8 +11,7 @@
                 android:title="@string/action_settings"/>
             <item
                 android:id="@+id/about"
-                android:title="@string/action_about"
-                />
+                android:title="@string/action_about"/>
         </menu>
     </item>
 </menu>
