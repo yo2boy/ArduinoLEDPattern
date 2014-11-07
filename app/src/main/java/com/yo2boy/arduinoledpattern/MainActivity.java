@@ -110,6 +110,9 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
                 sendString("5");
             else if ((results.get(0).equalsIgnoreCase("stop")) || (results.get(0).equalsIgnoreCase("clear")))
                 sendString("Z");
+            else if (results.get(0).equalsIgnoreCase("off")){
+                stop();
+            }
             else if (results.get(0).equalsIgnoreCase("1")) {
                 sendString("a");
                 led = (Switch) findViewById(ids[0]);
