@@ -30,7 +30,7 @@
             android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -55,7 +55,7 @@
             android:id="@+id/switch2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -80,7 +80,7 @@
             android:id="@+id/switch3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -105,7 +105,7 @@
             android:id="@+id/switch4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -130,7 +130,7 @@
             android:id="@+id/switch5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -155,7 +155,7 @@
             android:id="@+id/switch6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -180,7 +180,7 @@
             android:id="@+id/switch7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -205,7 +205,7 @@
             android:id="@+id/switch8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -230,7 +230,7 @@
             android:id="@+id/switch9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -255,7 +255,7 @@
             android:id="@+id/switch10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -280,7 +280,7 @@
             android:id="@+id/switch11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
     </TableRow>
@@ -305,21 +305,9 @@
             android:id="@+id/switch12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|fill_vertical|start"
+            android:layout_gravity="start"
             android:paddingLeft="50dp"
             android:paddingRight="50dp" />
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         android:minHeight="20dp">
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
     </TableRow>
 
     <Button

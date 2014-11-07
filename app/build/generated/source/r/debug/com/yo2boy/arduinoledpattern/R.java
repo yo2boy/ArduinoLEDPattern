@@ -43,12 +43,12 @@ public final class R {
         public static final int TextView10=0x7f08000b;
         public static final int TextView11=0x7f080002;
         public static final int TextView12=0x7f080005;
-        public static final int about=0x7f08002b;
-        public static final int action_settings=0x7f080029;
-        public static final int bLoop=0x7f080027;
-        public static final int bToggle=0x7f080028;
-        public static final int bVoice=0x7f080026;
-        public static final int settings=0x7f08002a;
+        public static final int about=0x7f08002a;
+        public static final int action_settings=0x7f080028;
+        public static final int bLoop=0x7f080026;
+        public static final int bToggle=0x7f080027;
+        public static final int bVoice=0x7f080025;
+        public static final int settings=0x7f080029;
         public static final int switch1=0x7f080003;
         public static final int switch10=0x7f08001e;
         public static final int switch11=0x7f080021;
@@ -61,7 +61,6 @@ public final class R {
         public static final int switch7=0x7f080015;
         public static final int switch8=0x7f080018;
         public static final int switch9=0x7f08001b;
-        public static final int tableRow1=0x7f080025;
     }
     public static final class layout {
         public static final int about_activity=0x7f030000;
