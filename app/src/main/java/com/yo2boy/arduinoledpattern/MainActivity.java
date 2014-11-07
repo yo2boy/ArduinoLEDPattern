@@ -58,7 +58,6 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
         b = new Boast(new Toast(this));
 
         b.makeText(this, "Press any switch and see the results!", Toast.LENGTH_LONG).show();
-
     }
 
     public void addListenerOnButton() {
