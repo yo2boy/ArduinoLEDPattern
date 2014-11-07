@@ -26,5 +26,6 @@
     <string name="toggle_turn_on">Turn OFF</string>
     <string name="toggle_turn_off">Turn ON</string>
     <string name="bDisplay">Display</string>
+    <string name="about">Made by: yotwoboy walruski</string>
 
 </resources>
