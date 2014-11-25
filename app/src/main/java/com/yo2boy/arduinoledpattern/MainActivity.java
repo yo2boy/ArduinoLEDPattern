@@ -90,176 +90,42 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 
         Switch led;
 
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            ArrayList<String> results = data
-                    .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+        if (requestCode == 1 && resultCode == RESULT_OK){
+            ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            String result = results.get(0);
+            
+            Log.d("Input", result);
 
-            Log.d("Input", results.get(0));
+            if(result.equalsIgnoreCase("att") || result.equalsIgnoreCase("et") || result.equalsIgnoreCase("heat") || result.equalsIgnoreCase("eight"))
+                result = "8";
 
-            if (results.get(0).equalsIgnoreCase("kriss kross"))
-                sendString("0");
-            else if (results.get(0).equalsIgnoreCase("random"))
-                sendString("1");
-            else if (results.get(0).equalsIgnoreCase("binary counter"))
-                sendString("2");
-            else if (results.get(0).equalsIgnoreCase("bouncing"))
-                sendString("3");
-            else if (results.get(0).equalsIgnoreCase("scanner"))
-                sendString("4");
-            else if (results.get(0).equalsIgnoreCase("knight rider"))
-                sendString("5");
-            else if ((results.get(0).equalsIgnoreCase("stop")) || (results.get(0).equalsIgnoreCase("clear")))
-                sendString("Z");
-            else if (results.get(0).equalsIgnoreCase("off")){
-                stop();
+            String[] actions = {"kriss kross", "random", "binary counter", "bouncing", "scanner", "knight rider", "stop", "clear", "off"};
+            for(int i = 0; i < actions.length; i++){
+                if(result.equalsIgnoreCase(actions[i])){
+                    if(i < 6) {
+                        sendString("" + i);
+                        break;
+                    }
+                    sendString("Z");
+                    stop();
+                }
             }
-            else if (results.get(0).equalsIgnoreCase("1")) {
-                sendString("a");
-                led = (Switch) findViewById(ids[0]);
-                led.setOnClickListener(null);
 
-                led.toggle();
+            char[] charActions = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'};
+            for(int i = 0; i < 12; i++){
+                if(result.equalsIgnoreCase(i + 1 + "")){
+                    sendString("" + charActions[i]);
+                    led = (Switch)findViewById(ids[i]);
+                    led.setOnClickListener(null);
+                    led.toggle();
 
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
+                    if(led.isChecked())
+                        bToggle.setChecked(true);
+                    else if(verifyAllOff())
                         bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("2")) {
-                sendString("b");
-                led = (Switch) findViewById(ids[1]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("3")) {
-                sendString("c");
-                led = (Switch) findViewById(ids[2]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("4")) {
-                sendString("d");
-                led = (Switch) findViewById(ids[3]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("5")) {
-                sendString("e");
-                led = (Switch) findViewById(ids[4]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("6")) {
-                sendString("f");
-                led = (Switch) findViewById(ids[5]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("7")) {
-                sendString("g");
-                led = (Switch) findViewById(ids[6]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("att") || results.get(0).equalsIgnoreCase("et") || results.get(0).equalsIgnoreCase("8")) {
-                sendString("h");
-                results.set(0, "8");
-                led = (Switch) findViewById(ids[7]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("9")) {
-                sendString("i");
-                led = (Switch) findViewById(ids[8]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("10")) {
-                sendString("j");
-                led = (Switch) findViewById(ids[9]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("11")) {
-                sendString("k");
-                led = (Switch) findViewById(ids[10]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
-            } else if (results.get(0).equalsIgnoreCase("12")) {
-                sendString("l");
-                led = (Switch) findViewById(ids[11]);
-                led.setOnClickListener(null);
-                led.toggle();
-
-                if(led.isChecked())
-                    bToggle.setChecked(true);
-                else
-                    if(verifyAllOff())
-                        bToggle.setChecked(false);
-
+                }
             }
+
             b.makeText(this, results.get(0), Toast.LENGTH_SHORT).show();
         }
 
